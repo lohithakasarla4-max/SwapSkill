@@ -1,0 +1,255 @@
+/* ==================================================
+   GENERAL
+   ================================================== */
+
+.stApp {
+    background: #fff7f7;
+    color: #222222;
+}
+
+
+/* ==================================================
+   HIDE STREAMLIT DEFAULT UI
+   ================================================== */
+
+#MainMenu {
+    visibility: hidden;
+}
+
+footer {
+    visibility: hidden;
+}
+
+header {
+    background: transparent !important;
+}
+
+
+/* ==================================================
+   HEADINGS
+   ================================================== */
+
+h1,
+h2,
+h3 {
+    color: #d90429 !important;
+}
+
+
+/* ==================================================
+   BUTTONS
+   ================================================== */
+
+.stButton > button {
+    background: #d90429 !important;
+    color: white !important;
+    border: none !important;
+    border-radius: 10px !important;
+    font-weight: 600 !important;
+    min-height: 42px !important;
+}
+
+.stButton > button:hover {
+    background: #b80323 !important;
+    color: white !important;
+}
+
+
+/* ==================================================
+   INPUT BOXES
+   ================================================== */
+
+.stTextInput input,
+.stTextArea textarea,
+.stSelectbox div[data-baseweb="select"],
+.stMultiSelect div[data-baseweb="select"] {
+    border-radius: 10px !important;
+}
+
+
+/* ==================================================
+   SIDEBAR
+   ================================================== */
+
+section[data-testid="stSidebar"] {
+    background: #d90429 !important;
+}
+
+section[data-testid="stSidebar"] * {
+    color: white !important;
+}
+
+.sidebar-title {
+    font-size: 26px;
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+
+/* ==================================================
+   SPLASH SCREEN
+   ================================================== */
+
+.st-key-skillswap_splash {
+
+    position: fixed !important;
+
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+
+    width: 100vw !important;
+    height: 100vh !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    background: #ffffff !important;
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    z-index: 999999999 !important;
+
+    animation:
+        splashFadeOut 4.5s ease-in-out forwards !important;
+
+    pointer-events: none !important;
+}
+
+
+/* ==================================================
+   SPLASH LOGO
+   ================================================== */
+
+.st-key-skillswap_splash [data-testid="stImage"] {
+
+    display: flex !important;
+
+    align-items: center !important;
+    justify-content: center !important;
+
+    width: auto !important;
+    max-width: 90vw !important;
+
+    animation:
+        skillSwapPop 4.5s ease-in-out forwards !important;
+}
+
+
+.st-key-skillswap_splash img {
+
+    width: min(75vw, 600px) !important;
+
+    max-width: 90vw !important;
+
+    height: auto !important;
+
+    display: block !important;
+}
+
+
+/* ==================================================
+   LOGO POP ANIMATION
+   ================================================== */
+
+@keyframes skillSwapPop {
+
+    0% {
+        opacity: 0;
+        transform: scale(0.05);
+    }
+
+    7% {
+        opacity: 1;
+        transform: scale(0.45);
+    }
+
+    14% {
+        opacity: 1;
+        transform: scale(1.25);
+    }
+
+    21% {
+        transform: scale(0.82);
+    }
+
+    28% {
+        transform: scale(1.12);
+    }
+
+    35% {
+        transform: scale(0.93);
+    }
+
+    42% {
+        transform: scale(1.04);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    78% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    90% {
+        opacity: 0.45;
+        transform: scale(1.04);
+    }
+
+    100% {
+        opacity: 0;
+        transform: scale(1.10);
+    }
+}
+
+
+/* ==================================================
+   SPLASH FADE OUT
+   ================================================== */
+
+@keyframes splashFadeOut {
+
+    0% {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    75% {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    90% {
+        opacity: 0.5;
+        visibility: visible;
+    }
+
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+
+/* ==================================================
+   MOBILE
+   ================================================== */
+
+@media (max-width: 768px) {
+
+    .st-key-skillswap_splash img {
+
+        width: 88vw !important;
+
+        max-width: 88vw !important;
+    }
+
+}
